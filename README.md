@@ -1,4 +1,4 @@
-# AutoCaptcha for IRCTS
+# AutoCaptcha for IRCTC
 
 Simple extension to fill in the captcha at [irctc.co.in](https://www.irctc.co.in/eticketing/loginHome.jsf).
 
