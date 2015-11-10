@@ -705,19 +705,23 @@ function prettyPrint(arr) {
 function addCredits() {
     if(document.getElementById("credit"))
     {}
-    else
     {
         var textbox = document.getElementById("cimage");
         var para = document.createElement("P");
-        var aTag = document.createElement('a');
-        aTag.setAttribute('href',"https://github.com/karthikb351/AutoCaptcha-for-IRCTC");
-        aTag.innerHTML = "AutoCaptcha";
-        aTag.style.cssText="font-size: 10px;";
-        var t = document.createTextNode(" - with ♥, Karthik Balakrishnan");
+        var aTag1 = document.createElement('a');
+        aTag1.setAttribute('href',"https://github.com/karthikb351/AutoCaptcha-for-IRCTC");
+        aTag1.innerHTML = "AutoCaptcha";
+        aTag1.style.cssText="font-size: 10px;";
+        var t = document.createTextNode(" - with ♥, ");
+        var aTag2 = document.createElement('a');
+        aTag2.setAttribute('href',"https://twitter.com/karthikb351");
+        aTag2.innerHTML = "Karthik Balakrishnan";
+        aTag2.style.cssText="font-size: 10px;";
         para.style.cssText=" font-size: 10px; text-align: center; margin-top: 0px; ";
         para.setAttribute("id", "credit");
-        para.appendChild(aTag);
-        para.appendChild(t);  
+        para.appendChild(aTag1);
+        para.appendChild(t);
+        para.appendChild(aTag2);
         textbox.parentElement.appendChild(para);
     }
 }
