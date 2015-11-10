@@ -5,5 +5,5 @@
   "description": "Fills in the captcha for you at IRCTC (irctc.co.in)",
   "author": "Karthik Balakrishnan",
   "license": "MIT",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

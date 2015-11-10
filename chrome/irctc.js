@@ -707,7 +707,7 @@ function addCredits() {
     {}
     else
     {
-        var textbox = document.getElementById("cimage");
+        
         var para = document.createElement("P");
         var aTag1 = document.createElement('a');
         aTag1.setAttribute('href',"https://github.com/karthikb351/AutoCaptcha-for-IRCTC");
@@ -723,29 +723,40 @@ function addCredits() {
         para.appendChild(aTag1);
         para.appendChild(t);
         para.appendChild(aTag2);
-        textbox.parentElement.appendChild(para);
+        if(isLogin()) {
+            var textbox = document.getElementById("cimage");
+            textbox.parentElement.appendChild(para);
+        }
+        else {
+            var textbox = document.getElementById("j_captcha");
+            textbox.parentNode.insertBefore(para, textbox.nextSibling);
+
+        }
     }
 }
 
 
 function loaded() {
 
-    console.log("AutoCaptcha for IRCTC");  
+    console.log("AutoCaptcha for IRCTC");
+    if(isLogin()) {
     var img = document.getElementById('cimage');
-    
+    }
+    else {
+
+        var img = document.getElementById('bkg_captcha');
+    }
     var startTime=new Date().getTime();
 
     var pixMap=getPixelMapFromId(img);
-    prettyPrint(pixMap);
     var captcha=getCaptcha(pixMap);
-    console.log(captcha);
     var endTime=new Date().getTime();
     if(captcha.length==5)
     {
         console.info("Parsed Captcha "+captcha+" in "+(endTime-startTime)+" milliseconds");
         var textbox = document.getElementsByName('j_captcha')[0];
-        addCredits();
         textbox.value=captcha;
+        addCredits();
     }
     else
     {
@@ -756,15 +767,24 @@ function loaded() {
     console.log("http://github.com/karthikb351/AutoCaptcha-for-IRCTC");
 }
 
+function isLogin() {
+    return window.location.href.indexOf("loginHome")>-1;
+}
 
-var img = document.getElementById('cimage');
+if(isLogin()) {
+    var img = document.getElementById('cimage');
+    var changeButton = document.getElementById("refresh");
+}
+else {
+    var img = document.getElementById('bkg_captcha');
+    var changeButton = document.getElementById("addPassengerForm:refresh_captcha_image");
+}
 
 if (img.complete) {
     loaded();
 } else {
     img.addEventListener('load', loaded);
 }
-var changeButton = document.getElementById("refresh");
 changeButton.addEventListener("click", function(){
     img.onload = function(){
        loaded();         
