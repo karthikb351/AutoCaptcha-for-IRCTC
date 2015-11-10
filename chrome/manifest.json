@@ -1,6 +1,6 @@
 {
   "name": "AutoCaptcha for IRCTC",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Karthik Balakrishnan",
   "description": "Fills in the captcha for you at IRCTC (irctc.co.in)",
   "permissions": ["*://www.irctc.co.in/*"],
