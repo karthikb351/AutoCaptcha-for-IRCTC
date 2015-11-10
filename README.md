@@ -8,7 +8,7 @@ Install the extension manually - [AutoCaptcha for IRCTC](chrome.crx?raw=true)
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/AutoCaptcha-for-chrome/issues).
+Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/AutoCaptcha-for-IRCTC/issues).
 
 ## Contributing and License
 
