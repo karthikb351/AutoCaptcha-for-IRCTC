@@ -711,11 +711,13 @@ function addCredits() {
         var para = document.createElement("P");
         var aTag1 = document.createElement('a');
         aTag1.setAttribute('href',"https://github.com/karthikb351/AutoCaptcha-for-IRCTC");
+        aTag1.setAttribute("target", "_blank"); // opening link in new tab instead of same page
         aTag1.innerHTML = "AutoCaptcha";
         aTag1.style.cssText="font-size: 10px;";
         var t = document.createTextNode(" - with ♥, ");
         var aTag2 = document.createElement('a');
         aTag2.setAttribute('href',"https://twitter.com/karthikb351");
+        aTag2.setAttribute("target", "_blank"); // opening link in new tab instead of same page
         aTag2.innerHTML = "Karthik Balakrishnan";
         aTag2.style.cssText="font-size: 10px;";
         para.style.cssText=" font-size: 10px; text-align: center; margin-top: 0px; ";
