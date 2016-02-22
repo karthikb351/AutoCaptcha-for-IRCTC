@@ -12,11 +12,20 @@ Have a bug or a feature request? If your problem or idea is not addressed yet, [
 
 ##Instructions for Manual Install
 
+### Chrome
 1. Clone this repo or [Download Zip](https://github.com/karthikb351/AutoCaptcha-for-IRCTC/archive/master.zip)
 2. Open Google Chrome and go to settings.
 3. Click the Extensions tab on the left sidebar, and enable developer mode. 
 4. Click on Load Unpacked Extension and navigate to the Chrome folder in the unzipped file you downloaded or the cloned repo folder.
 5. Installation Complete! Now go grab that cup of tea and rejoice! 
+
+### Firefox
+1. Clone this repo or [Download Zip](https://github.com/karthikb351/AutoCaptcha-for-IRCTC/archive/master.zip)
+2. Install [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Installation)
+3. Go to firefox folder in the source folder
+4. Run `jpm xpi` in command line to build the xpi file.
+5. In firefox addons page, select 'Install Add-on From File'. Locate and choose the compiled xpi file.
+6. Done!
 
 ## Contributing and License
 
