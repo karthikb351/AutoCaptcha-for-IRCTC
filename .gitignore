@@ -16,3 +16,6 @@ sftp-config.json
 # Chrome extension private key
 *.pem
 chrome.zip
+
+# Firefox output
+*.xpi
