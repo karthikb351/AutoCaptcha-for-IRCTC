@@ -1,9 +1,13 @@
 {
   "name": "autocaptcha-for-irctc",
   "title": "AutoCaptcha for IRCTC",
-  "id": "jid1-aEL04CgHfwCOwA",
   "description": "Fills in the captcha for you at IRCTC (irctc.co.in)",
   "author": "Karthik Balakrishnan",
+  "main": "index.js",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
   "license": "MIT",
   "version": "0.0.3"
 }
